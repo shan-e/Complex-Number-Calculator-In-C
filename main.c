@@ -12,16 +12,18 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "funcs.h"
+#include "funcs.h" // import function library
 
 int main(int argc, char *argv[]) {
     struct Complex num1;
     struct Complex num2;
     struct Complex answer;
-    char *symbol = argv[3];
+    char *symbol = argv[3]; // will always be 3rd arg from argv
 
+    //if there is not 6 args altogether, print usage
     if (argc != 6) printUsage(argv[0]);
 
+    // will always be nth arg from argv
     num1.realPart = atof(argv[1]);
     num1.imaginaryPart = atof(argv[2]);
     num2.realPart = atof(argv[4]);
